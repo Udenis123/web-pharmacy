@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="login .css">
+
+        <title>log in</title>
+    </head>
+   
+    <body bgcolor="white">
+        <table border="0" width="100%" cellspacing="0" style="text-align:center;font-size: 22px;">
+           
+            <tr style="height: 100px;"><td colspan="7"><img src="pharmlogo.jpg" style="width: 100%;height: 250px;size: cover" alt="image"></td>
+            </tr>
+            <tr>
+              <td colspan="7"><div class="banner"><a href="home.html" id="link">HOME</a>
+              <a href="customer.html"  id="link">CUSTOMER </a>
+              <a href="owner.html" id="link">OWNER PROTAL</a>
+              <a href="technician.html" id="link">TECHNICIAN </a>
+              <a href="contact.html" id="link">CONTACT US</a>
+              <a href="signup.html" id="link">SIGN UP</a>
+              <a href="login.html" id="link">LOG IN</a></div></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+                <tr style=" background-image:url('login-photo.jpg');"> <td class="log in" colspan="7"><h1> SIGN IN</h1>
+       
+                  <form id="loginForm" action="login.php" method="POST">
+                    <div>
+                        <input type="radio" name="userType" value="C" id="customer" checked>
+                        <label for="customer">Customer</label>
+                        <input type="radio" name="userType" value="T" id="technician">
+                        <label for="technician">Technician</label>
+                        <input type="radio" name="userType" value="O" id="owners">
+                        <label for="owners">Owners</label>
+                    </div><br><br>
+            
+                    <label for="Email">EMAIL:</label>
+                    <input type="text" name="Email" id="Email" placeholder="Email address" ><br><br>
+                    <label for="password">PASSWORD:</label>
+                    <input type="password" name="password" id="password" placeholder="5 digits" required><br><br>
+                    <input type="submit" id="loginButton" value="Login"><br>
+                    <div>
+                        <a class="login_link" href="#">Forgot Password</a>
+                        <a class="login_link" href="signup.html">Sign Up</a>
+                    </div>
+                </form>
+
+                  </td>
+                  </tr>
+            
+              <tr><td colspan="7"><!-- footer -->
+                <footer>
+                  <div class="container">
+                      <div class="service">
+                        <h4>about us</h4>
+                        <p>Pharmacy is a leading provider of healthcare products and services. 
+                          We offer a wide range of prescription medications, over-the-counter products, 
+                          and medical supplies to help you stay healthy and well.</p>
+                      </div>
+                      <div class="our-contact">
+                        <h4>Contact Us</h4>
+                        <ul class="list-unstyled">
+                          <li><i class="fas fa-phone"></i>(555) 555-5555</li>
+                          <li><i class="fas fa-envelope"></i><a href="">info@pharmacy.com</a></li>
+                        </ul>
+                      </div>
+                      <div class="media">
+                        <h4>Follow Us</h4>
+                        <ul class="list-inline social-icons">
+                          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                      </div>
+                  </div>
+                  <div class="bottom-bar">
+                        <div>
+                          <p>&copy; 2023 Pharmacy. All rights reserved.</p>
+                        </div>
+                        <div >
+                          <ul>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Site Map</a></li>
+                          </ul>
+                        </div>
+                  </div>
+                </footer>
+            </td></tr>
+             
+    
+        </table>
+        <script src="login.js"></script>
+    </body>
+</html>

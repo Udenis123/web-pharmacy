@@ -1,0 +1,263 @@
+.menu{
+    background-color: #4CAF50;
+    height: 50px;
+    padding:10px 16px;
+} 
+
+
+#link{
+    text-decoration:none;
+    color:white;
+    font-size: 15px;
+    font-weight: 200;
+}
+.search-key{
+         lighting-color: azure;
+}
+.search-input{
+    padding:5px;
+    border-radius:5px 0 0 5px;
+    border:1px solid #202020;
+    outline: none;
+    }
+    .search-button{
+        padding:5px;
+        background-color:#4CAF50;
+        color:white;
+        border-radius:0 5px 5px 0;
+        border:1px solid #ccc;
+        cursor:pointer;
+    
+    }
+    
+  /*footer code of css*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Footer container */
+  footer {
+   
+    color:white;
+    padding: 30px 0;
+    font-size:20px; 
+    background-color:rgba(1, 1, 22, 0.952);
+  }
+  
+  /* Content container */
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: auto;
+    
+  }
+  
+  /* Sections within the container */
+  footer .service,
+  footer .our-contact,
+  footer .media {
+    flex-basis: calc(33.333333% - 20px); /* Adjust as needed */
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+  
+  /* Unstyled list */
+  footer ul.list-unstyled {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  /* Social icons */
+  footer .social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  footer .social-icons li a {
+    display: block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: background-color 0.3s ease;
+  }
+  
+  footer .social-icons li a:hover {
+    background-color: #333;
+  }
+  
+  footer .social-icons li a i {
+    color: #fff;
+    margin-right: 5px;
+  }
+  
+  /* Bottom bar container */
+  footer .bottom-bar {
+    background-color:black;
+    padding: 10px 0;
+  }
+  
+  /* Bottom bar content */
+  footer .bottom-bar > div {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* List in bottom bar */
+  footer .bottom-bar ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  footer .bottom-bar ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  footer .bottom-bar ul li a {
+  
+    text-decoration: none;
+  }
+  
+  /* Horizontal alignment */
+  @media (max-width: 768px) {
+    footer .service,
+    footer .our-contact,
+    footer .media {
+      flex-basis: 100%;
+      margin-right: 0;
+    }
+  }
+  
+/*end of footer css*/  
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#4CAF50;
+  padding: 10px 0;
+}
+
+.banner a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  flex: 1; /* Distribute available space equally */
+  text-align: center;
+  margin: 0 5px; /* Add a small margin for spacing */
+}
+
+.banner a:hover {
+  background-color: rgba(0, 119, 255, 0.863);
+}
+  
+  /* Style for the box */
+  .testimonial-box {
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 30px;
+    width: 20%;
+    height:25%;
+    border-width:10px;
+    padding: 20px;
+    margin: 10px;
+    background-color:rgb(246, 255, 197);
+    text-align:left;
+    font-family: 'Times New Roman', Times, serif;
+    
+   
+  }
+  .textemoil{
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size:small ;
+    font-weight:regular;
+  }
+
+
+ .conditon-seach{
+  margin-top: 20px;
+  margin-bottom: 20px;
+ }
+ .cond-search{
+  margin: 10px;
+  text-decoration:none;
+
+ }
+ .more-medical{
+    border: 1px solid white;
+    width: 30%;
+    height:25%;
+    border-width:10px;
+    padding: 20px;
+    margin: 20px;
+    background-color:rgb(246, 255, 197);
+    text-align:left;
+    margin-right: 20px;
+  
+
+ }
+ h1,h2,h3{
+  margin-top: 30px;
+  margin-bottom: 30px;
+ }
+.more-button{
+  padding: 10px 20px;
+  background-color:rgb(246, 255, 197);;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.hidden {
+  display: none;
+}
+#medicationBox {
+  position: absolute;
+  top: 80%;
+  right: 20px;
+  width: 200px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* CSS for the search input */
+.search-input1 {
+  width: 300px; /* Adjust the width as needed */
+  padding: 12px;
+  border: 2px solid #007bff; /* Border color for the input */
+  border-radius: 20px; /* Rounded corners */
+  font-size: 18px; /* Adjust the font size as needed */
+}
+
+/* CSS for the search button */
+.search-button1 {
+  padding: 12px 24px; /* Adjust padding for button size */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 20px; /* Rounded corners */
+  font-size: 18px; /* Adjust the font size as needed */
+  cursor: pointer;
+  text-decoration: none; /* Remove underlines from the anchor (button) */
+}
+
+/* Style for the search button on hover */
+.search-button1:hover {
+  background-color: #0056b3; /* Change the hover background color to your preference */
+}
+a{
+  text-decoration: none;
+}

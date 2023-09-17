@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technician Dashboard</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+#chat-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+#chat-form {
+    display: flex;
+}
+
+#message {
+    flex-grow: 2;
+    padding: 10px;
+}
+.dashboard-navigation {
+            width: 200px;
+            float: left;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .dashboard-navigation a {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dashboard-navigation a:hover {
+            background-color: #ddd;
+        }
+
+        /* Style for logout button */
+        #logout-button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            width: 100%;
+        }
+        #profile-image-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+#profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#image-upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#upload-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #7bff00;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#profile-image-container:hover #upload-label {
+    display: block;
+}
+
+
+    </style>
+
+  <body>
+
+      <header>
+          <h1>Technician Dashboard</h1>
+      </header>
+      <div class="dashboard-navigation">
+        <div id="profile-image-container">
+            <img src="your-image.jpg" alt="Technician Image" id="profile-image">
+            <input type="file" id="image-upload" accept="image/*" style="display: none;">
+            <label for="image-upload" id="upload-label">Upload Image</label>
+        </div>
+        <a href="home.html">Home</a>
+        <a href="#">All Reports</a>
+        <a href="#">Message</a>
+        <a href="#">Customer order</a>
+        <button id="logout-button">Logout</button>
+    </div>
+    
+      <div class="container">
+          <section class="report-section">
+              <h2>Report Medicine</h2>
+              <form id="report-form">
+                  <label for="medicine-name">Medicine Name:</label>
+                  <input type="text" id="medicine-name" required>
+                  <label for="quantity">Quantity Sold:</label>
+                  <input type="number" id="quantity" required>
+                  <label for="amount">Amount:</label> 
+                  <input type="number" id="amount" required>
+  <button type="submit" onclick="addReportToTable() ">Submit Report</button>
+              </form>
+              <h2>Modify Reports</h2>
+              <table border="1" id="report-table">
+                  <thead>
+                      <tr>
+                          <th>Medicine Name</th>
+                          <th>Quantity Sold</th>
+                          <th>Amount</th>
+                          <th>Actions</th></tr>
+                          <tr><td>parcetamol</td><td>20</td><td>300 rwf</td>
+                          <td><button class="modify-report-button">Modify</button> <button id=" submit-button">Submit to Owner</button></td></tr>
+                          <tr><td>parcetamol</td><td>20</td><td>300 rwf</td>
+                            <td><button class="modify-report-button">Modify</button> <button id=" submit-button">Submit to Owner</button></td></tr>
+                            <tr><td>parcetamol</td><td>20</td><td>300 rwf</td>
+                              <td><button class="modify-report-button">Modify</button> <button id=" submit-button">Submit to Owner</button></td></tr>
+                              <tr><td>parcetamol</td><td>20</td><td>300 rwf</td>
+                                <td><button class="modify-report-button">Modify</button> <button id=" submit-button">Submit to Owner</button></td></tr>
+                                      
+                  </thead>
+                  <tbody>
+                      <!-- Report data will be dynamically generated here -->
+                  </tbody>
+              </table>
+              
+              
+          </section>
+          <section class="stock-section">
+              <h2>Stock Management</h2>
+              <table id="stock-table">
+                  <thead>
+                      <tr>
+                          <th>Medicine Name</th>
+                          <th>Current Stock</th>
+                          <th>Change</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <!-- Stock data will be dynamically generated here -->
+                  </tbody>
+              </table>
+              <button class="modify-stock-button">Modify</button>
+              <input type="number" class="stock-change-input" placeholder="Change Stock">
+              <button id="stock-submit-button">Submit Change</button>
+          </section>
+      </div>
+ 
+  
+   
+
+  <script>
+
+// Get references to HTML elements
+const imageUploadInput = document.getElementById("image-upload");
+const profileImage = document.getElementById("profile-image");
+const uploadLabel = document.getElementById("upload-label");
+
+// Add an event listener to the file input
+imageUploadInput.addEventListener("change", function () {
+    const file = this.files[0];
+
+    // Check if a file was selected
+    if (file) {
+        // Read the selected image file and display it
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            // Set the source of the profile image to the uploaded image
+            profileImage.src = e.target.result;
+        };
+
+        reader.readAsDataURL(file);
+    }
+});
+
+// Display the upload label on hover
+profileImage.addEventListener("mouseenter", function () {
+    uploadLabel.style.display = "block";
+});
+
+// Hide the upload label when not hovered
+profileImage.addEventListener("mouseleave", function () {
+    uploadLabel.style.display = "none";
+});
+
+
+  </script>
+</body>
+</html>

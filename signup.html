@@ -1,0 +1,198 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="signup.css">
+
+        <title>SIGN UP</title>
+    </head>
+   
+    <body bgcolor="white">
+        <table border="0" width="100%" cellspacing="0" >
+           
+            <tr style="height: 100px;"><td colspan="7"><img src="pharmlogo.jpg" style="width: 100%;height: 250px;size: cover" alt="image"></td>
+            </tr>
+            <div>
+				<tr>
+					<td colspan="7"><div class="banner"><a href="home.html" id="link">HOME</a>
+					<a href="customer.html"  id="link">CUSTOMER </a>
+					<a href="owner.html" id="link">OWNER PROTAL</a>
+					<a href="technician.html" id="link">TECHNICIAN </a>
+					<a href="contact.html" id="link">CONTACT US</a>
+					<a href="signup.html" id="link">SIGN UP</a>
+					<a href="login.html" id="link">LOG IN</a></div></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+				  <td ></td>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+			  </tr>
+    
+                <tr > <td class="log in" colspan="7">
+					<h1 style="text-align: center;"> SIGN UP</h1>
+
+	<div class="radioclass" >
+
+
+		<input type="radio" name="formSelection" value="form1" onclick="showForm('form1')">
+		<label  class="radio-lable" for="customerRadio">Customer</label>
+		<input type="radio" name="formSelection" value="form2" onclick="showForm('form2')">
+		<label class="radio-lable"	for="ownerRadio">Owner</label>
+		</div><br><br>
+
+
+	<form id="form2" name="owner" action="signupowner.php" method="POST" onsubmit="return validateCustomerForm2()" style="display: none;">
+
+		<label for="name" style="margin-top: 50px;">NAME:</label> 
+		<input type="text" name="owner-name" id="name" placeholder=" full name" required><br><br>
+		<label for="owner-email">EMAIL:</label><br>
+		<input type="text" name="owner-email" id="owner-email" placeholder="Email address" required>
+		<br><span class="error" id="owner-email-error"></span><br>
+		<br>
+		<label for="phoneo">PHONE:</label>
+		<input type="text" name="owner-phone" id="phoneo" required><br><br>
+		<label for="nameo">NAME FOR PHARMACY:</label>
+		<input type="text"  id="nameo" name="owner-pharmacy-name" placeholder=" pharmacy name" required><br><br>
+		<label> SELECT LOCATION OF PHARMACY:</label>
+		<select name="owner-province" >
+			<option value="">select provence</option>
+			<option value="1">North provence</option>
+			<option value="2">south provence</option>
+			<option value="3">west provence</option>
+			<option value="4">East provence</option>
+			<option value="5">kigali city</option>
+		</select>
+		<select name="owner-district">
+			<option value="">select district</option>
+			<option value="1">Nyarugenge</option>
+			<option value="2">Gasabo</option>
+			<option value="3">Kicukiro</option>
+			<option value="4">Rulindo</option>
+			<option value="5">Musanze</option>
+		</select>
+		<select name="owner-sector" >
+			<option value="">select sector</option>
+			<option value="1">Nyamirambo</option>
+			<option value="2">Kimisagara</option>
+			<option value="3">Mumena</option>
+			<option value="4">Gitega</option>
+			<option value="5">Kivugiza</option>
+		</select><br><br>
+		<label for="owner-password">PASSWORD:</label>
+		<input type="password" id="owner-password" name="owner-password" laceholder="Atleast 8 charcter" required>
+		<br><span class="error" id="owner-password-error"></span>
+		<br><br>
+		<label for="repassword">COMFIRM PASSWORD:</label>
+		<input type="password" id="repasswordo" name="owner-repassword" placeholder="" required><br><br>
+		<input type="submit" name="owners-submit" id="owners-submit" value="Register">
+		<br><br>
+		<div>
+			<a class="login_link" href="login.html">Log In</a>
+			</div>
+	</form>
+	
+	<form id="form1" name="customer" action="signupcustomer.php" method="POST" onsubmit="return validateCustomerForm()">
+			
+			<label for="name"  style="margin-top: 50px;">NAME:</label>
+			<input type="text"  id="name" name="customer-name" placeholder=" full name" required><br><br>
+			<label for="customer-email">EMAIL:</label>
+			<input type="text" name="customer-email" id="customer-email" placeholder="Email address" required >
+			<br><span class="error" id="customer-email-error"></span>
+			<br><br>
+			<label for="phone">PHONE:</label>
+			<input type="text" name="customer-phone" id="phone" required><br><br>
+			<label> SELECT LOCATION:</label>
+			
+			<select name="customer-province" >
+				<option value="">select provence</option>
+				<option value="1">North provence</option>
+				<option value="2">south provence</option>
+				<option value="3">west provence</option>
+				<option value="4">East provence</option>
+				<option value="5">kigali city</option>
+			</select>
+			<select name="customer-district">
+				<option value="">select district</option>
+				<option value="1">Nyarugenge</option>
+				<option value="2">Gasabo</option>
+				<option value="3">Kicukiro</option>
+				<option value="4">Rulindo</option>
+				<option value="5">Musanze</option>
+			</select>
+			<select name="customer-sector" >
+				<option value="">select sector</option>
+				<option value="1">Nyamirambo</option>
+				<option value="2">Kimisagara</option>
+				<option value="3">Mumena</option>
+				<option value="4">Gitega</option>
+				<option value="5">Kivugiza</option>
+			</select><br><br>
+			<label for="customer-password">PASSWORD:</label>
+			<input type="password" name="customer-password" id="customer-password" placeholder="Atleast 8 charcter" required>
+			<br>
+			<span class="error" id="customer-password-error"></span>
+			<br><br>
+			<label for="repassword">COMFIRM PASSWORD:</label>
+			<input type="password" name="customer-repassword" id="repassword" placeholder="" required><br><br><br>
+			<input type="submit" name="customer-submit" id="customer-submit" value="Register">
+			<br><br>
+	
+	<div>
+	<a class="login_link" href="login.html">Log In</a>
+	</div>
+          
+		</form>
+		<script src="signup.js"></script>
+		</script>
+       
+                 
+                  </td>
+                  </tr>
+            
+              <tr><td colspan="7" style="text-align: center;"><!-- footer -->
+                <footer>
+                  <div class="container">
+                      <div class="service">
+                        <h4>about us</h4>
+                        <p>Pharmacy is a leading provider of healthcare products and services. 
+                          We offer a wide range of prescription medications, over-the-counter products, 
+                          and medical supplies to help you stay healthy and well.</p>
+                      </div>
+                      <div class="our-contact">
+                        <h4>Contact Us</h4>
+                        <ul class="list-unstyled">
+                          <li><i class="fas fa-phone"></i>(555) 555-5555</li>
+                          <li><i class="fas fa-envelope"></i><a href="">info@pharmacy.com</a></li>
+                        </ul>
+                      </div>
+                      <div class="media">
+                        <h4>Follow Us</h4>
+                        <ul class="list-inline social-icons">
+                          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                      </div>
+                  </div>
+                  <div class="bottom-bar">
+                        <div>
+                          <p>&copy; 2023 Pharmacy. All rights reserved.</p>
+                        </div>
+                        <div >
+                          <ul>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Site Map</a></li>
+                          </ul>
+                        </div>
+                  </div>
+                </footer>
+            </td></tr>
+             
+    
+        </table>
+    </body>
+</html>

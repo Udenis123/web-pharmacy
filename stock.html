@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Owner Control</title>
+    <style>
+        /* Basic styles for the link-style buttons */
+        .link-button {
+            display: block;
+            width: 50%;
+            padding: 8px 16px;
+            margin: 8px;
+            border: 2px solid #4CAF50;
+            font-size: 18px;
+            color: #4CAF50;
+            text-decoration: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: color 0.3s, background-color 0.3s;
+        }
+        .link-button:hover {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        /* Adjust styles for the form container */
+        .form-container {
+            width: 80%;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f4f4f4;
+            height: 600px;
+        }
+        /* Style the button container to align the button horizontally */
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+        /* Align labels and input elements on the same line */
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        /* Adjust label width */
+        .input-group label {
+            flex: 1;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        /* Adjust input and select width */
+        .input-group select,
+        .input-group input[type="text"] {
+            flex: 2;
+            padding: 10px;
+            font-size: 18px;
+        }
+        /* Table styles */
+        .in-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+  <body bgcolor="white">
+    <table border="0" width="100%" cellspacing="0" style="text-align:center;font-size: 22px;">
+       
+        <tr style="height: 100px;"><td colspan="7"><img src="pharmlogo.jpg" style="width: 100%;height: 250px;size: cover" alt="image"></td>
+        </tr>
+        <div>
+        <tr class="menu">
+            <td><a href="home.html" id="link">HOME</a></td>
+            <td><a href="customer.html"  id="link">CUSTOMER PROTAL</a></td>
+            <td><a href="owner.html" id="link">OWNER PROTAL</a></td>
+            <td ><a href="technician.html" id="link">TECHNICIAN PROTAL</a></td>
+            <td><a href="contact.html" id="link">CONTACT US</a></td>
+            <td><a href="signup.html" id="link">SIGN UP</a></td>
+            <td><a href="login.html" id="link">LOG IN</a></td>
+        </tr>
+        <tr><td class="search-key" colspan="7" style="text-align: right;">
+            <input type="text box" class="search-input" placeholder="type to search">
+            <input type="button" class="search-button" value="search">
+            </td></tr>
+            <tr style=""> <td colspan="7">
+              <div class="form-container">
+                <form>
+                  <h1 style="font-size: 24px;"><strong>Make Stock Below</strong></h1>
+                  <div class="button-container">
+                    <a href="owner.html" class="link-button">ADD</a>
+                    <a href="update.html" class="link-button">UPDATE</a>
+                    <a href="stock.html" class="link-button">CHECK stock</a>
+                    <a href="insurance.html" class="link-button">Insurance</a>
+                </div>
+                   
+                    <table class="in-table" border="1">
+                        <tr>
+                            <th>NAME OF MEDICINE:</th>
+                            <th>TYPE OF MEDICINE:</th>
+                            <th>DESCRIPTION OF MEDICINE:</th>
+                            <th>QUANTITY/ps</th>
+                            <th>PRICE/ps:</th>
+                        </tr>
+                        <tr>
+                            <td>paracetamol</td>
+                            <td>paracetamol cello</td>
+                            <td>25ml</td>
+                            <td>200</td>
+                            <td>500</td>
+                        </tr>
+                    </table>
+                  
+                </form>
+            </div>
+            
+              
+              </td>
+              </tr>
+        
+          <tr><td colspan="7"><hr></td></tr><!-- footer -->
+            <tr><td  class="footer-link" colspan="7" style="background-color:rgb(45, 97, 45)" >
+            <!-- your account / your orders / help / sign out -->
+                  <a href="" >Your Account</a>
+                  <a href="" class="">Your Orders</a>
+                  <a href="" >Already a customer? Sign in</a>
+                  <a href="" >Help</a>
+               </td></tr>
+                  <!-- condition of use links -->
+                  <tr ><td colspan="7" style="background-color:rgb(45, 97, 45);">
+                    <footer>
+                    <div>
+                  
+                  </div>
+            <div class="footer-link" >
+                  <a href="" > Pharmacy Terms of Use</a>
+                  <a href="" target="" class="">Notice of Privacy Practices</a>
+                  <a href="">Nondiscrimination Notice</a>
+            </div>
+            <div style="text-align: left;">© 2023, pharmacy.com, Inc. or its affiliates</div>
+          </footer>
+        </td></tr>
+         
+
+    </table>
+</body>
+</html>

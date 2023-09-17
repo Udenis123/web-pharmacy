@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pharmacy Ordering System</title>
+	<style>
+/* General styles */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header, footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+
+header h1, footer p {
+	margin: 0;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 20px;
+}
+
+section {
+	flex-basis: 50%;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	margin-bottom: 20px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+button {
+	padding: 10px;
+	background-color: #4CAF50;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+}
+
+/* Styles for products section */
+#products {
+	margin-right: 20px;
+}
+
+#products li {
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+
+#products h3 {
+	margin-top: 0;
+}
+
+.add-to-cart {
+	margin-top: 10px;
+}
+
+/* Styles for cart section */
+#cart {
+	position: relative;
+}
+
+#cart-items {
+	border: 1px solid #ccc;
+	padding: 10px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: #fff;
+	display: none;
+}
+
+#cart-items li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+#cart-items img {
+	max-width: 50px;
+	height: auto;
+	margin-right: 10px;
+}
+
+#cart-total {
+	font-weight: bold;
+}
+
+#checkout {
+	background-color: #f44336;
+	margin-top: 20px;
+	color: #fff;
+}
+
+#checkout:hover {
+	background-color: #d32f2f;
+}
+
+    </style>
+</head>
+<body>
+	<header>
+		<h1>Pharmacy Ordering System</h1>
+	</header>
+	<main>
+		<section id="products">
+			<h2>Products</h2>
+			<ul>
+				<li>
+					<img src="product1.jpg">
+					<h3>Product 1</h3>
+					<p>Description of product 1.</p>
+					<button class="add-to-cart">Add to Cart</button>
+				</li>
+				<li>
+					<img src="product2.jpg">
+					<h3>Product 2</h3>
+					<p>Description of product 2.</p>
+					<button class="add-to-cart">Add to Cart</button>
+				</li>
+				<!-- Add more products here -->
+			</ul>
+		</section>
+		<section id="cart">
+			<h2>Shopping Cart</h2>
+			<ul id="cart-items">
+				<!-- Cart items will be added dynamically using JavaScript -->
+			</ul>
+			<p>Total: <span id="cart-total">$0.00</span></p>
+			<button id="checkout">Checkout</button>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Pharmacy Ordering System</p>
+	</footer>
+
+	<script >
+        // Get the HTML elements
+const cartItems = document.getElementById('cart-items');
+const cartTotal = document.getElementById('cart-total');
+const checkoutBtn = document.getElementById('checkout');
+const productBtns = document.querySelectorAll('.add-to-cart');
+
+// Define an array to store items in the cart
+let cart = [];
+
+// Add click event listener to all product buttons
+productBtns.forEach(btn => {
+	btn.addEventListener('click', () => {
+		// Get the product details
+		const product = btn.parentNode;
+		const imgSrc = product.querySelector('img').src;
+		const name = product.querySelector('h3').textContent;
+		const price = parseFloat(product.querySelector('p').textContent.replace('$', ''));
+
+		// Check if the item is already in the cart
+		const existingItem = cart.find(item => item.name === name);
+		if (existingItem) {
+			existingItem.quantity++;
+		} else {
+			cart.push({ name, price, quantity: 1, imgSrc });
+		}
+
+		// Update the cart UI
+		updateCart();
+	});
+});
+
+// Update the cart UI
+function updateCart() {
+	// Clear the previous cart items
+	cartItems.innerHTML = '';
+
+	// Add the new cart items
+	cart.forEach(item => {
+		const li = document.createElement('li');
+		const img = document.createElement('img');
+		img.src = item.imgSrc;
+		const nameSpan = document.createElement('span');
+		nameSpan.textContent = item.name;
+		const priceSpan = document.createElement('span');
+		priceSpan.textContent = `$${item.price.toFixed(2)}`;
+		const quantityInput = document.createElement('input');
+		quantityInput.type = 'number';
+		quantityInput.min = 1;
+		quantityInput.value = item.quantity;
+		const removeBtn = document.createElement('button');
+		removeBtn.textContent = 'Remove';
+		removeBtn.addEventListener('click', () => {
+			removeItem(item);
+			updateCart();
+		});
+
+		li.appendChild(img);
+		li.appendChild(nameSpan);
+		li.appendChild(priceSpan);
+		li.appendChild(quantityInput);
+		li.appendChild(removeBtn);
+
+		cartItems.appendChild(li);
+	});
+
+	// Update the cart total
+	const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+	cartTotal.textContent = `$${total.toFixed(2)}`;
+
+	// Enable/disable checkout button based on cart status
+	if (cart.length > 0) {
+		checkoutBtn.removeAttribute('disabled');
+	} else {
+		checkoutBtn.setAttribute('disabled', true);
+	}
+}
+
+// Remove an item from the cart
+function removeItem(item) {
+	const index = cart.findIndex(i => i.name === item.name);
+	if (index !== -1) {
+		if (item.quantity > 1) {
+			item.quantity--;
+			cart[index] = item;
+		} else {
+			cart.splice(index, 1);
+		}
+	}
+}
+
+// Add click event listener to checkout button
+checkoutBtn.addEventListener('click', () => {
+	if (cart.length > 0) {
+		alert(`Total amount: $${cartTotal.textContent}`);
+		
+        // You can add your payment processing code here
+        // For example, you can use Stripe or PayPal APIs to process payments
+        // You can also send the order details to your server for processing
+        // However, implementing payment processing is beyond the scope of this example
+        // and requires significant knowledge and expertise in web development and security.
+        
+        // After the payment is processed, you can clear the cart and update the UI
+        cart = [];
+        updateCart();
+    }
+});
+
+    </script>
+</body>
+</html>

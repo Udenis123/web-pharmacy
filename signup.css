@@ -1,0 +1,284 @@
+form {
+  margin: 0 auto;
+  width: 50%;
+  font-family: Arial, sans-serif;
+  background-color:  #c4c72852;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30 px;
+}
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="password"]{
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+
+}
+select {
+  width: 91%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+input[type="submit"] {
+  width: 90%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #71722c52;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  padding: 16px;
+}
+
+.error {
+  color: red;
+}
+h1 {
+  margin-top: 30px;
+  font-size: 28px;
+  color: rgb(21, 35, 44);
+  
+
+}
+.login_link {
+  
+  margin-top: 20px;
+  text-decoration: none;
+ color:black;
+
+}
+
+.login_link:hover {
+  text-decoration: underline;
+}
+/* Style the container */
+.radioclass{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    
+    gap: 10px; /* Adjust the gap between radio buttons and labels */
+    padding: 10px; /* Add padding around the container */
+    background-color: #ffffff; /* Background color of the container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow to the container */
+    border-radius: 10px; /* Rounded corners for the container */
+    position:absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Style the radio buttons */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px; /* Adjust the size of the radio button */
+  height: 16px; /* Adjust the size of the radio button */
+  border: 2px solid #999; /* Border color of the radio button */
+  border-radius: 50%; /* Make it a circle */
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Style the radio buttons when selected */
+input[type="radio"]:checked {
+  border-color: #45a049; /* Change the border color when selected */
+}
+
+/* Style the labels */
+.radio-lable {
+  font-size: 14px; /* Adjust the font size of the labels */
+  cursor: pointer;
+}
+
+
+/* css code for footer*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Footer container */
+footer {
+ 
+  color:white;
+  padding: 30px 0;
+  font-size:20px; 
+  background-color:rgba(1, 1, 22, 0.952);
+  margin-top: 30 px;
+}
+
+/* Content container */
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: auto;
+  
+}
+
+/* Sections within the container */
+footer .service,
+footer .our-contact,
+footer .media {
+  flex-basis: calc(33.333333% - 20px); /* Adjust as needed */
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin:0%;
+}
+
+/* Unstyled list */
+footer ul.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Social icons */
+footer .social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer .social-icons li a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.3s ease;
+}
+
+footer .social-icons li a:hover {
+  background-color: #333;
+}
+
+footer .social-icons li a i {
+  color: #fff;
+  margin-right: 5px;
+}
+
+/* Bottom bar container */
+footer .bottom-bar {
+  background-color:black;
+  padding: 10px 0;
+}
+
+/* Bottom bar content */
+footer .bottom-bar > div {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* List in bottom bar */
+footer .bottom-bar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer .bottom-bar ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer .bottom-bar ul li a {
+
+  text-decoration: none;
+}
+
+/* Horizontal alignment */
+@media (max-width: 768px) {
+  footer .service,
+  footer .our-contact,
+  footer .media {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+}
+.menu{
+  background-color: #4CAF50; height: 50px;
+  padding:10px 16px;
+  
+
+}
+#link{
+  text-decoration:none;
+  color:white;
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#4CAF50;
+  padding: 10px 0;
+}
+
+.banner a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  flex: 1; /* Distribute available space equally */
+  text-align: center;
+  margin: 0 5px; /* Add a small margin for spacing */
+}
+
+.banner a:hover{
+  background-color:rgba(0, 119, 255, 0.863);
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Medicine</title>
+</head>
+<body>
+  <form id="addForm">
+    <label for="medicineName">Medicine Name:</label>
+    <input type="text" id="medicineName" name="medicineName" required><br>
+    
+    <label for="medicineType">Medicine Type:</label>
+    <input type="text" id="medicineType" name="medicineType" required><br>
+    
+    <label for="medicineDescription">Medicine Description:</label>
+    <input type="text" id="medicineDescription" name="medicineDescription" required><br>
+    
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" required><br>
+    
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" required><br>
+    
+    <button type="button" onclick="addRow()">Add to Table</button>
+  </form>
+  
+  <table id="medicineTable" class="in-table" border="1">
+    <tr>
+      <th>NAME OF MEDICINE:</th>
+      <th>TYPE OF MEDICINE:</th>
+      <th>DESCRIPTION OF MEDICINE:</th>
+      <th>QUANTITY/ps</th>
+      <th>PRICE/ps:</th>
+    </tr>
+    <!-- Existing table rows -->
+  </table>
+
+  <script>
+    function addRow() {
+      const medicineName = document.getElementById("medicineName").value;
+      const medicineType = document.getElementById("medicineType").value;
+      const medicineDescription = document.getElementById("medicineDescription").value;
+      const quantity = document.getElementById("quantity").value;
+      const price = document.getElementById("price").value;
+
+      const table = document.getElementById("medicineTable");
+      const newRow = table.insertRow(table.rows.length);
+      const cells = [medicineName, medicineType, medicineDescription, quantity, price];
+
+      for (let i = 0; i < cells.length; i++) {
+        const cell = newRow.insertCell(i);
+        cell.textContent = cells[i];
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Owner Control</title>
+    <style>
+        /* Basic styles for the link-style buttons */
+        .link-button {
+            display: block;
+            width: 100%;
+            padding: 8px 16px; /* Reduced padding */
+            margin: 8px;
+            border: 2px solid #4CAF50;
+            font-size: 18px;
+            color: #4CAF50;
+            text-decoration: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: color 0.3s, background-color 0.3s;
+        }
+        .link-button:hover {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        /* Adjust styles for the form container */
+        .form-container {
+            width: 50%;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f4f4f4;
+            height: auto; /* Adjusted height to fit content */
+        }
+        /* Style the button container to align the button horizontally */
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+        /* Align labels and input elements on the same line */
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        /* Adjust label width */
+        .input-group label {
+            flex: 1;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        /* Adjust input and select width */
+        .input-group select,
+        .input-group input[type="text"] {
+            flex: 2;
+            padding: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <form>
+        <h1 style="font-size: 24px;"><strong>Make Stock Below</strong></h1>
+        <div class="button-container">
+            <a href="owner.html" class="link-button">ADD</a>
+            <a href="update.html" class="link-button">UPDATE</a>
+            <a href="stock.html" class="link-button">CHECK stock</a>
+            <a href="insurance.html" class="link-button">Insurance</a>
+        </div>
+        <ul>
+            <h4>Choose insurance to work with your pharmacy</h4>
+            <div class="input-group">
+                <input type="checkbox" name="insurance"><label>PRIME insurance</label><br>
+            </div>
+            <div class="input-group">
+                <input type="checkbox" name="insurance"><label>MISUR insurance</label><br>
+            </div>
+            <div class="input-group">
+                <input type="checkbox" name="insurance"><label>RADIANT insurance</label><br>
+            </div>
+            <div class="input-group">
+                <input type="checkbox" name="insurance"><label>AMIA insurance</label><br>
+            </div>
+            <div class="button-container">
+                <input type="submit" value="Attach" class="link-button">
+                <input type="submit" value="UPDATE" class="link-button update-button">
+            </div>
+        </ul>
+    </form>
+</div>
+</body>
+</html>

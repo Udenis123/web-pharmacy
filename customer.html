@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customer Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="customer.css">
+</head>
+<body>
+  <div class="menu">
+    <button class="menu-btn">MENU</button>
+    <div class="menu-content">
+        <ul><li><a href="home.html">Home</a></li>
+    <li><a href="#">Payment method</a></li>
+    <li><a href="#"> Your account</a></li>
+    <li><a href="#">Logout</a></li></ul>
+    
+  </div>
+</div>
+  <header>
+    <h1>Customer Dashboard</h1>
+    <form>
+      <label for="location">Enter your location:</label>
+      <select name="location" id="location" value="5">
+        <option >select provence</option>
+        <option value="1">kigali city</option>
+        <option value="5">North provence</option>
+        <option value="2">south provence</option>
+        <option value="3">west provence</option>
+        <option value="4">East provence</option>
+    </select>
+    <select name="District" id="district">
+        <option >select district</option>
+        <option value="1">Nyarugenge</option>
+        <option value="2">Gasabo</option>
+        <option value="3">Kicukiro</option>
+    </select>
+    <select name="sector" id="sector" >
+        <option >Select Sector</option>
+        <option value="1">Kivugiza</option>
+        <option value="2">Mumena</option>
+        <option value="3">Nyamirambo</option>
+        <option value="3">Gitega</option>
+        …[omitted]
+      </select>
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <main>
+    <div class="pharmacy-box">
+    <h2>Pharmacies near you:</h2>
+    <ul id="pharmacies"></ul>
+  </div>
+  <div class="cart">
+    <h2>Cart</h2>
+    <ul id="cart-items">
+      <!-- Cart items will be populated dynamically -->
+    </ul>
+    <button onclick="checkout()">Checkout</button>
+    <button id="order-btn" disabled onclick="">Order Medication from:</button> 
+  </main>
+
+
+
+  <div id="list-of-medication" style="display:none; ">
+    <header>
+      <h1>Pharmacy Ordering System</h1>
+    </header> 
+
+    <div class="medication" >
+      <h3>Medication 3</h3>
+      <p>Type:<span>here</span></p>
+      <p>Discription:<span>here</span> </p>
+      <p>Price:<span>here</span></p>
+      <p>Quantity:<span><input type="number" id="quantity" name="quantity" min="1" value="1"></span></p>
+      <button onclick="addToCart('Medication 3')" class="order-button">Order</button>
+    </div>
+      <div class="medication" >
+        <h3>Medication 3</h3>
+        <p>Type:<span>here</span></p>
+        <p>Discription:<span>here</span> </p>
+        <p>Price:<span>here</span></p>
+        <p>Quantity:<span><input type="number" id="quantity" name="quantity" min="1" value="1"></span></p>
+        <button onclick="addToCart('Medication 3')" class="order-button">Order</button>
+      </div>
+      <div class="medication" >
+        <h3>Medication 3</h3>
+        <p>Type:<span>here</span></p>
+        <p>Discription:<span>here</span> </p>
+        <p>Price:<span>here</span></p>
+        <p>Quantity:<span><input type="number" id="quantity" name="quantity" min="1" value="1"></span></p>
+        <button onclick="addToCart('Medication 3')" class="order-button">Order</button>
+      </div>
+      <!-- Add more medication sections as needed -->
+  
+     
+      </div>
+    </div>
+
+  </div>
+<!-- footer for customer  -->
+<footer>
+  <div class="container">
+    <div class="service">
+      <h4>about us</h4>
+      <p>Pharmacy is a leading provider of healthcare products and services. 
+        We offer a wide range of prescription medications, over-the-counter products, 
+        and medical supplies to help you stay healthy and well.</p>
+    </div>
+    <div class="our-contact">
+      <h4>Contact Us</h4>
+      <ul class="list-unstyled">
+        <li><i class="fas fa-phone"></i>(555) 555-5555</li>
+        <li><i class="fas fa-envelope"></i><a href="">info@pharmacy.com</a></li>
+      </ul>
+    </div>
+    <div class="media">
+      <h4>Follow Us</h4>
+      <ul class="list-inline social-icons">
+        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+</div>
+<div class="bottom-bar">
+      <div>
+        <p>&copy; 2023 Pharmacy. All rights reserved.</p>
+      </div>
+      <div >
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Site Map</a></li>
+        </ul>
+      </div>
+</div>
+</footer>
+<script src="customer.js"></script>
+</body>
+</html>

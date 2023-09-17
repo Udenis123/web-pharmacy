@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Owner  Dashboard</title>
+ <link rel="stylesheet" type="text/css" href="owner.css" >
+ <!DOCTYPE html>
+ <html><head><title></title></head>
+</head>
+<body>
+  <header>
+    <h1><span>Pharmacy-name</span> Dashboard</h1>
+    
+
+    <div class="menu">
+        <button class="menu-btn">MENU</button>
+        <div class="menu-content">
+            <ul><li><a href="#">Home</a></li>
+        <li><a href="#">Stock</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Technicians</a></li>
+        <li><a href="#"> Your Account</a></li>
+        <li><a href="#">Logout</a></li></ul>
+        
+      </div>
+    </div>
+ 
+  </header>
+  <h1 style="font-size: 24px;"><strong>Make Stock Below</strong></h1>
+  <div class="button-container">
+      <button class="link-button" type="button" onclick="toggleForm1()">ADD</button>
+      <button class="link-button" type="button" onclick="toggleForm()">UPDATE</button>
+      <button class="link-button" type="button" onclick="toggleForm2()">CHECK stock</button>
+      
+  </div>
+  <form id="add">
+
+    <div class="input-group">
+     
+          <label for="image-upload">Upload medical image:</label>
+          <input type="file" accept="image/jpeg,image/png,image/jpg" id="image-input">
+        
+      
+  </div> 
+   
+    <div class="input-group">
+     
+        <label >NAME OF MEDICINE:</label>
+        <select id="medName">
+            <option value="">Select a medicine</option>
+            <option value="paracetamol">Paracetamol</option>
+            <option value="ibuprofen">Ibuprofen</option>
+            <!-- Add more options as needed -->
+        </select>
+    </div>
+    <div class="input-group">
+        <label >TYPE OF MEDICINE:</label>
+        <select id="medType">
+            <option value="">Select a type</option>
+            <option value="cillo">Paracetamol Cillo</option>
+            <option value="drugs">Paracetamol Drugs</option>
+            <!-- Add more options as needed -->
+        </select>
+    </div>
+    <div class="input-group">
+        <label >DESCRIPTION OF MEDICINE:</label>
+        <select id="medDescription">
+            <option value="">Select a description</option>
+            <option value="50ml">50 ml</option>
+            <option value="25ml">25 ml</option>
+            <option value="250mg">250 mg</option>
+            <option value="500mg">500 mg</option>
+            <!-- Add more options as needed -->
+        </select>
+    </div>
+    <div class="input-group">
+        <label>QUANTITY/ps:</label>
+        <input type="text" name="number" id="quantity">
+    </div>
+    <div class="input-group">
+        <label >PRICE/ps:</label>
+        <input type="text" name="number" id="price">
+    </div>
+    <div class="button-container">
+        <button class="link-button add-button" onclick="handleFormSubmit()">ADD</button>
+    </div>
+</form>
+</div>
+
+  
+  <!-- up date form to be hidden -->
+  
+      
+          <form id="update">
+              <div class="input-group">
+                  <label>NAME OF MEDICINE:</label>
+                  <select id="medName">
+                      <option value="">Select name to stock</option>
+                      <option value="paracetamol">Paracetamol</option>
+                      <option value="paracetamol_cello">Paracetamol Cello</option>
+                      <option value="paracetamol">Paracetamol</option>
+                      <option value="paracetamol">Paracetamol</option>
+                      <option value="paracetamol">Paracetamol</option>
+                      <option value="paracetamol">Paracetamol</option>
+                      <option value="paracetamol">Paracetamol</option>
+                  </select>
+              </div>
+              <div class="input-group">
+                  <label >TYPE OF MEDICINE:</label>
+                  <select id="medType">
+                      <option value="">Select type to stock</option>
+                      <option value="paracetamol_cillo">Paracetamol Cillo</option>
+                      <option value="paracetamol_drugs">Paracetamol Drugs</option>
+                  </select>
+              </div>
+              <div class="input-group">
+                
+            </div>
+              <div class="input-group">
+                  <label >DESCRIPTION OF MEDICINE:</label>
+                  <select id="medDescription">
+                      <option value="">Select description</option>
+                      <option value="50ml">50 ml</option>
+                      <option value="25ml">25 ml</option>
+                      <option value="250mg">250 mg</option>
+                      <option value="500mg">500 mg</option>
+                  </select>
+              </div>
+              <div class="input-group">
+                  <label >QUANTITY/ps:</label>
+                  <input type="text" name="number" id="quantity">
+              </div>
+              <div class="input-group">
+                  <label>PRICE/ps:</label>
+                  <input type="text" name="number" id="price">
+              </div>
+              <div class="button-container">
+                <button class="link-button add-button">UPDATE</button>
+              </div>
+          </form>
+          
+
+          <table class="in-table" id="table-body" border="1" style="display:none">
+            <tr>
+              <th>NAME OF MEDICINE:</th>
+              <th>TYPE OF MEDICINE:</th>
+              <th>DESCRIPTION OF MEDICINE:</th>
+              <th>QUANTITY/ps</th>
+              <th>PRICE/ps:</th>
+              <th>STATUS OF STOCK</th>
+              <th >IMAGE OF MEDICINE</th>
+              <th>STORE(store/delete)</th>
+            </tr>
+            
+            </table>
+         
+     
+  <footer>
+    <footer>
+      <div class="container">
+          <div class="service">
+            <h4>about us</h4>
+            <p>Pharmacy is a leading provider of healthcare products and services. 
+              We offer a wide range of prescription medications, over-the-counter products, 
+              and medical supplies to help you stay healthy and well.</p>
+          </div>
+          <div class="our-contact">
+            <h4>Contact Us</h4>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-phone"></i>(555) 555-5555</li>
+              <li><i class="fas fa-envelope"></i><a href="">info@pharmacy.com</a></li>
+            </ul>
+          </div>
+          <div class="media">
+            <h4>Follow Us</h4>
+            <ul class="list-inline social-icons">
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+      </div>
+      <div class="bottom-bar">
+            <div>
+              <p>&copy; 2023 Pharmacy. All rights reserved.</p>
+            </div>
+            <div >
+              <ul>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Site Map</a></li>
+              </ul>
+            </div>
+      </div>
+    </footer>
+    
+  </footer>
+  
+  <script src="owner.js"> </script>
+</body>
+</html>

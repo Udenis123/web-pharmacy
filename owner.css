@@ -1,0 +1,304 @@
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding:  10px;
+
+}
+
+
+
+section{
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+.menu {
+    position: fixed;
+  top: 0;
+  left:0;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.menu-btn {
+  background-color:#4CAF50;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  padding: 8px 12px;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #333;
+}
+
+.menu-content ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-content li a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+
+}
+
+.menu:hover .menu-content {
+  display:inline-block ;
+  color:green;
+}
+.link-button {
+            display: block;
+            width: 50%;
+            padding: 8px 16px; /* Reduced padding */
+            margin: 8px;
+            border: 2px solid #4CAF50;
+            font-size: 18px;
+            color: #4CAF50;
+            text-decoration: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: color 0.3s, background-color 0.3s;
+        }
+        .link-button:hover {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        /* Adjust styles for the form container */
+        .form-container {
+            width: 80%;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f4f4f4;
+            height: 600px;
+        
+        }
+        /* Style the button container to align the button horizontally */
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            align:center;
+        }
+        /* Align labels and input elements on the same line */
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        /* Adjust label width */
+        .input-group label {
+            flex: 1;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        /* Adjust input and select width */
+        .input-group select,
+        .input-group input[type="text"] {
+            flex: 2;
+            padding: 10px;
+            font-size: 18px;
+        }
+        #update{
+          display: none;
+        }
+        #addd{
+          display: none;
+        }
+        /* css for table*/
+
+.in-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.in-table th, .in-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.in-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+.in-table td{
+  font-size: 20px;
+}
+
+.in-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.in-table tr:hover {
+  background-color: #e0e0e0;
+}
+/*insurance*/
+#insurance{
+
+  display:none;
+}
+* {
+
+  box-sizing: border-box;
+}
+
+/* Footer container */
+footer {
+ 
+  color:white;
+  padding: 30px 0;
+  font-size:20px; 
+  background-color:rgba(1, 1, 22, 0.952);
+}
+
+/* Content container */
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: auto;
+  
+}
+
+/* Sections within the container */
+footer .service,
+footer .our-contact,
+footer .media {
+  flex-basis: calc(33.333333% - 20px); /* Adjust as needed */
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+/* Unstyled list */
+footer ul.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Social icons */
+footer .social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer .social-icons li a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.3s ease;
+}
+
+footer .social-icons li a:hover {
+  background-color: #333;
+}
+
+footer .social-icons li a i {
+  color: #fff;
+  margin-right: 5px;
+}
+
+/* Bottom bar container */
+footer .bottom-bar {
+  background-color:black;
+  padding: 10px 0;
+}
+
+/* Bottom bar content */
+footer .bottom-bar > div {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* List in bottom bar */
+footer .bottom-bar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer .bottom-bar ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer .bottom-bar ul li a {
+
+  text-decoration: none;
+}
+
+/* Horizontal alignment */
+@media (max-width: 768px) {
+  footer .service,
+  footer .our-contact,
+  footer .media {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+}
+/* image upload css*/
+.image-upload {
+    margin-top: 20px;
+}
+
+.image {
+    margin-top: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+#uploaded-image {
+    display: none;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.store-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+}
+.image-input {
+    max-width: 50px;
+    max-height: 30px;
+  }
+ 
